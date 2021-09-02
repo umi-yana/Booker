@@ -3,21 +3,15 @@
 <%= flash[:notice] %>
 
 <div class="field">
-    <p>
- <strong>Title</strong>
- <%= @book.title %></p>
+    <p><strong>Title:</strong><%= @book.title %></p>
 </div>
 
 <div class="field">
-    <p>
-    <label for="book_body">Body</label>
-    <%= @book.body %></p>
+    <p><strong>Body:</strong><%= @book.body %></p>
 </div>
 
-<div class="edit">
-<%= link_to "Edit",edit_book_path(@book.id) %>
-</div>
-
-<div class="back">
-<%= link_to "Back",books_path %>
+<div class="show">
+  <%= link_to "Edit",edit_book_path(@book) %>
+|
+    <%= link_to "Back",books_path %>
 </div>
